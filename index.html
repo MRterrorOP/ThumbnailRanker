@@ -74,9 +74,30 @@
         >
           ThumbnailRanker
         </div>
-
-        <div id="imgUploderBox">
-          <h1 id="heading">Uploads you'r</h1>
+        <div class="container-fluid text-white" id="imgBox">
+          <div class="container" id="Img">
+            <label for="fileInput">
+              <img
+                src="Image/cloud-computing.png"
+                class="img-fluid"
+                alt="uplodingImg"
+                height="80px"
+                width="80px"
+                style="cursor: pointer"
+              />
+            </label>
+            <input
+              type="file"
+              id="fileInput"
+              style="display: none"
+              accept="image/*"
+              onchange=""
+            />
+          </div>
+          <div class="container-md">
+            Upload ThumbnailRanker
+            <input type="file" id="file" style="display: none" />
+          </div>
         </div>
       </div>
       <div
@@ -101,5 +122,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
