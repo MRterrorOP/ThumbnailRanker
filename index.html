@@ -63,41 +63,98 @@
         <div
           class="container-fluid"
           style="
-            background-color: rgba(160, 32, 240, 0.1);
-            height: 50px;
-            color: rgb(179, 13, 245, 0.9);
+            background-color: rgba(160, 32, 240, 0.9);
+            height: 4vw;
+            color: rgba(175, 245, 13, 0.9);
             text-align: center;
-            font-size: x-large;
+            font-size: 3vw;
             font-weight: 700;
-            padding-top: 8px;
+            padding-top: auto;
+            position: sticky;
+            top: 0%;
           "
         >
           ThumbnailRanker
         </div>
-        <div class="container-fluid text-white" id="imgBox">
-          <div class="container" id="Img">
-            <label for="fileInput">
-              <img
-                src="Image/cloud-computing.png"
-                class="img-fluid"
-                alt="uplodingImg"
-                height="80px"
-                width="80px"
-                style="cursor: pointer"
+        <div id="BodyBox">
+          <div
+            id="box1"
+            style="width: 20%; height: 100%; background-color: white"
+          >
+            <form>
+              <label
+                style="font-size: 1vw; font-size-adjust: 5px"
+                for="urlOFImg"
+              >
+                Enter your Thumbnail url:-
+                <input
+                  type="url"
+                  name="urlOFImg"
+                  id="urlOFImg"
+                  style="width: 80%; max-width: 400px"
+                />
+              </label>
+
+              <label
+                style="font-size: 1vw; font-size-adjust: 5px"
+                for="urlOFImg"
+              >
+                Enter your Title:-
+                <input
+                  type="url"
+                  name="urlOFImg"
+                  id="urlOFImg"
+                  style="width: 80%; max-width: 400px"
+                />
+              </label>
+              <input
+                type="submit"
+                style="
+                  width: 8vw;
+                  font-size: 1vw;
+                  margin: 1px vw;
+
+                  box-sizing: content-box;
+                  background-color: skyblue;
+                  border: none;
+                  border-radius: 15px;
+                  color: black;
+                "
+                value="Upload"
               />
-            </label>
-            <input
-              type="file"
-              id="fileInput"
-              style="display: none"
-              accept="image/*"
-              onchange=""
-            />
+            </form>
           </div>
-          <div class="container-md">
-            Upload ThumbnailRanker
-            <input type="file" id="file" style="display: none" />
+          <div
+            id="box2"
+            style="width: 59.8%; height: 100%; background-color: white"
+          >
+            <div id="imgViewer">
+              <div onclick="test()" class="card">
+                <img
+                  src="https://i.ytimg.com/vi/nPHFjkCYJm8/hq720.jpg"
+                  alt="Img 2"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <h4><b>Jane Doe</b></h4>
+                </div>
+              </div>
+              <div onclick="test()" class="card">
+                <img
+                  src="https://i.ytimg.com/vi/nPHFjkCYJm8/hq720.jpg"
+                  alt="Img 2"
+                  style="width: 100%"
+                />
+                <div class="container">
+                  <h4><b>Jane Doe</b></h4>
+                </div>
+              </div>
+            </div>
           </div>
+          <div
+            id="box3"
+            style="width: 20%; height: 100%; background-color: white"
+          ></div>
         </div>
       </div>
       <div
