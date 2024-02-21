@@ -70,8 +70,7 @@ body {
   padding-top: 1%;
   overflow-x: hidden;
 }
-#box2 {
-}
+
 #imgViewer {
   width: 90%;
   height: 80vh;
@@ -82,7 +81,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  background-image: url(Image/360_F_567460720_meuVUMqysMiMKuuH0A5Du9FvYhoDU3Sp.jpg);
+  background-image: url("Image/360_F_567460720_meuVUMqysMiMKuuH0A5Du9FvYhoDU3Sp.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -115,4 +114,10 @@ img {
 }
 h4 {
   font-size: 2vw;
+}
+#rankDisplayer {
+  width: 80%;
+  height: 90vh;
+  margin: 10%;
+  border: 0.5vh solid gray;
 }

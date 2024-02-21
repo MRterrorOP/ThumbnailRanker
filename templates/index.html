@@ -10,7 +10,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
     <nav>
@@ -63,7 +66,7 @@
         <div
           class="container-fluid"
           style="
-            background-color: rgba(160, 32, 240, 0.9);
+            background-color: rgb(44, 50, 72, 0.5);
             height: 4vw;
             color: rgba(175, 245, 13, 0.9);
             text-align: center;
@@ -81,7 +84,7 @@
             id="box1"
             style="width: 20%; height: 100%; background-color: white"
           >
-            <form>
+            <form id="myform">
               <label
                 style="font-size: 1vw; font-size-adjust: 5px"
                 for="urlOFImg"
@@ -101,8 +104,8 @@
               >
                 Enter your Title:-
                 <input
-                  type="url"
-                  name="urlOFImg"
+                  type="text"
+                  name="title"
                   id="urlOFImg"
                   style="width: 80%; max-width: 400px"
                 />
@@ -123,6 +126,11 @@
                 value="Upload"
               />
             </form>
+            {% if submitted %}
+            <p id="title" style="display: none">{{title}}</p>
+            <p id="urlofimg" style="display: none">{{thumbnail_url}}</p>
+
+            {% endif %}
           </div>
           <div
             id="box2"
@@ -131,6 +139,7 @@
             <div id="imgViewer">
               <div onclick="test()" class="card">
                 <img
+                  id="img1"
                   src="https://i.ytimg.com/vi/nPHFjkCYJm8/hq720.jpg"
                   alt="Img 2"
                   style="width: 100%"
@@ -139,8 +148,9 @@
                   <h4><b>Jane Doe</b></h4>
                 </div>
               </div>
-              <div onclick="test()" class="card">
+              <div class="card">
                 <img
+                  id="img2"
                   src="https://i.ytimg.com/vi/nPHFjkCYJm8/hq720.jpg"
                   alt="Img 2"
                   style="width: 100%"
@@ -154,7 +164,9 @@
           <div
             id="box3"
             style="width: 20%; height: 100%; background-color: white"
-          ></div>
+          >
+            <div id="rankDisplayer"></div>
+          </div>
         </div>
       </div>
       <div
@@ -179,6 +191,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="../static/script.js"></script>
   </body>
 </html>
