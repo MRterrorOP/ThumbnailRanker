@@ -116,8 +116,18 @@ h4 {
   font-size: 2vw;
 }
 #rankDisplayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vh;
+  flex: start;
+  overflow: auto;
   width: 80%;
   height: 90vh;
   margin: 10%;
   border: 0.5vh solid gray;
+}
+.responsive-img {
+  max-width: 80%;
 }

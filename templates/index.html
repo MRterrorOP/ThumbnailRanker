@@ -66,7 +66,8 @@
         <div
           class="container-fluid"
           style="
-            background-color: rgb(44, 50, 72, 0.5);
+            background-color: rgb(16, 16, 16, 0.5);
+            backdrop-filter: blur(8px);
             height: 4vw;
             color: rgba(175, 245, 13, 0.9);
             text-align: center;
@@ -84,7 +85,7 @@
             id="box1"
             style="width: 20%; height: 100%; background-color: white"
           >
-            <form id="myform">
+            <form id="myform" action="/" method="post">
               <label
                 style="font-size: 1vw; font-size-adjust: 5px"
                 for="urlOFImg"
@@ -95,6 +96,7 @@
                   name="urlOFImg"
                   id="urlOFImg"
                   style="width: 80%; max-width: 400px"
+                  required
                 />
               </label>
 
@@ -108,6 +110,7 @@
                   name="title"
                   id="urlOFImg"
                   style="width: 80%; max-width: 400px"
+                  required
                 />
               </label>
               <input
@@ -137,26 +140,24 @@
             style="width: 59.8%; height: 100%; background-color: white"
           >
             <div id="imgViewer">
-              <div onclick="test()" class="card">
+              <div class="card">
                 <img
                   id="img1"
                   src="https://i.ytimg.com/vi/nPHFjkCYJm8/hq720.jpg"
-                  alt="Img 2"
                   style="width: 100%"
                 />
                 <div class="container">
-                  <h4><b>Jane Doe</b></h4>
+                  <h4 id="heading-1"></h4>
                 </div>
               </div>
               <div class="card">
                 <img
                   id="img2"
                   src="https://i.ytimg.com/vi/nPHFjkCYJm8/hq720.jpg"
-                  alt="Img 2"
                   style="width: 100%"
                 />
                 <div class="container">
-                  <h4><b>Jane Doe</b></h4>
+                  <h4 id="heading-2"></h4>
                 </div>
               </div>
             </div>
@@ -170,6 +171,7 @@
         </div>
       </div>
       <div
+        style="color: #e5f50880"
         class="tab-pane fade"
         id="nav-profile"
         role="tabpanel"
