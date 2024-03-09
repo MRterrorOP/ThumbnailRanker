@@ -85,4 +85,5 @@ function createAndSubmitForm(selectedID, remainingID) {
 
   // Send the FormData object as the request body
   xhr.send(formData);
+  location.reload();
 }
